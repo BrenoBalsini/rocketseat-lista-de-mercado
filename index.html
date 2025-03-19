@@ -12,14 +12,11 @@
   <link rel="stylesheet" href="styles/index.css">
 </head>
 
-
-
-
 <body>
   <header>
     <div id="status-bar">
       <span>9:41</span>
-      <span>
+      <span id="mobile-icons">
         <img src="assets/icons/Light.svg" alt="">
         <img src="assets/icons/wifi.svg" alt="">
         <img src="assets/icons/battery.svg" alt="">
@@ -28,19 +25,17 @@
   </header>
 
   <main>
+    <span><a href="#"><- Voltar</a></span>
     <h1>
       Compras da semana
     </h1>
     <div id="submit">
-      <input type="text" id="new-item" name="new-item">
-      <button>Adicionar item</button>
+      <input type="text" id="new-item" name="new-item" placeholder="Adicione um novo item">
+      <button id="add-item">Adicionar item</button>
     </div>
   
     <ul id="list">
-      <li><input type="checkbox"><p>Pão de forma</p><img src="assets/icons/trash.svg" alt=""></li>
-      <li><input type="checkbox"><p>Café preto</p><img src="assets/icons/trash.svg" alt=""></li>
-      <li><input type="checkbox"><p>Suco de laranja</p><img src="assets/icons/trash.svg" alt=""></li>
-      <li><input type="checkbox"><p>Bolacha</p><img src="assets/icons/trash.svg" alt=""></li>
+      <li class="checkbox"><input type="checkbox"><span></span><p>Pão de forma</p><img src="assets/icons/trash.svg" alt=""></li>
     </ul>
 
     <div class="alert">
@@ -49,7 +44,8 @@
       <img src="assets/icons/delete-small.svg" alt="">
     </div>
 
-
   </main>
 </body>
+
+<script src="script.js"></script>
 </html>
