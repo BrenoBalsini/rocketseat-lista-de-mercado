@@ -13,6 +13,7 @@ form.onsubmit = (event) => {
   const inputCheckbox = document.createElement('input')
   const imgDelete = document.createElement('img')
   const spanCheckbox = document.createElement('span')
+  const addBtn = document.getElementById('addBtn')
 
   newItem.className = 'checkbox'
 
@@ -25,12 +26,12 @@ form.onsubmit = (event) => {
   newItem.appendChild(pText)
   newItem.appendChild(imgDelete)
 
-  list.appendChild(newItem)
+  if (itemInput.value.trim() !== ''){
+    list.appendChild(newItem)
+  }
 
   const deleteItem = document.querySelectorAll('.checkbox img')
   const alertBox = document.querySelector('.alert')
-
-  console.log(deleteItem)
 
   deleteItem.forEach(img => {
     img.addEventListener('click', (e) =>{
@@ -40,7 +41,8 @@ form.onsubmit = (event) => {
     })
   })
 
-  document.getElementById('itemInput').value = ''
+    document.getElementById('itemInput').value = ''
+    document.getElementById('itemInput').focus()  
 }
 
 function alertFadeInOut(element) {
