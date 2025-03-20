@@ -39,6 +39,8 @@ form{
 
 ul{
   margin-bottom: 2.25rem;
+  display: grid;
+  gap: 1rem;
 
   & li{
     display: flex;

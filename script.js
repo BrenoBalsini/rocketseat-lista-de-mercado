@@ -30,12 +30,17 @@ form.onsubmit = (event) => {
   const deleteItem = document.querySelectorAll('.checkbox img')
   const alertBox = document.querySelector('.alert')
 
-  deleteItem.forEach(imgDelete => {
-  imgDelete.addEventListener('click', () => {
-    newItem.remove()
-    alertFadeInOut(alertBox)
+  console.log(deleteItem)
+
+  deleteItem.forEach(img => {
+    img.addEventListener('click', (e) =>{
+      const deleteLi = e.target.closest('li')
+      deleteLi.remove()
+      alertFadeInOut(alertBox)
+    })
   })
-})
+
+  document.getElementById('itemInput').value = ''
 }
 
 function alertFadeInOut(element) {
